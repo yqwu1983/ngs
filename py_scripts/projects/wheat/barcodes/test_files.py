@@ -1,0 +1,6 @@
+fastq_file1 = '/home/anna/bioinformatics/htses/ERR015599_1/not_bsc_1.fastq'
+fastq_file2 = '/home/anna/bioinformatics/htses/ERR015599_1/not_bsc_2.fastq'
+fastq_file1 = '/home/anna/bioinformatics/htses/katya/0sec_ACAGTG_L001_R1_001.fastq'
+fastq_file2 = '/home/anna/bioinformatics/htses/katya/0sec_ACAGTG_L001_R2_001.fastq'
+folder1 = '/home/anna/bioinformatics/htses/katya/1/'
+folder2 = '/home/anna/bioinformatics/htses/katya/2/'

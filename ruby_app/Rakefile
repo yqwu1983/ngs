@@ -1,0 +1,12 @@
+require_relative './config/application.rb'
+require 'standalone_migrations'
+
+StandaloneMigrations::Tasks.load_tasks
+
+namespace :db do
+  task :hello do
+    puts "HELLOO"
+  end
+end
+
+task :default => ["db:hello"]

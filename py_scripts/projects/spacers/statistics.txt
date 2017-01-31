@@ -1,0 +1,81 @@
+'SS_39_CRISPR.fasta'
+91704 reads; of these:
+  91704 (100.00%) were unpaired; of these:
+    16495 (17.99%) aligned 0 times
+    44930 (48.99%) aligned exactly 1 time
+    30279 (33.02%) aligned >1 times
+82.01% overall alignment rate
+
+'first_10_kb_t5.fasta'
+16495 reads; of these:
+  16495 (100.00%) were unpaired; of these:
+    11745 (71.20%) aligned 0 times
+    4750 (28.80%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+28.80% overall alignment rate
+
+'t5.fasta'
+11745 reads; of these:
+  11745 (100.00%) were unpaired; of these:
+    11731 (99.88%) aligned 0 times
+    14 (0.12%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.12% overall alignment rate
+
+'pT7blue-G8esc_rev.fasta'
+11731 reads; of these:
+  11731 (100.00%) were unpaired; of these:
+    11431 (97.44%) aligned 0 times
+    300 (2.56%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+2.56% overall alignment rate
+
+'KD263_CRISPR_region.fasta'
+11431 reads; of these:
+  11431 (100.00%) were unpaired; of these:
+    10357 (90.60%) aligned 0 times
+    1074 (9.40%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+9.40% overall alignment rate
+
+'pt7blue-T4.fasta'
+10357 reads; of these:
+  10357 (100.00%) were unpaired; of these:
+    10357 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+
+'T4_genome.fasta'
+10357 reads; of these:
+  10357 (100.00%) were unpaired; of these:
+    10357 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+
+'BW25113.fasta'
+10357 reads; of these:
+  10357 (100.00%) were unpaired; of these:
+    10071 (97.24%) aligned 0 times
+    266 (2.57%) aligned exactly 1 time
+    20 (0.19%) aligned >1 times
+2.76% overall alignment rate
+
+'BL21.fasta'
+10071 reads; of these:
+  10071 (100.00%) were unpaired; of these:
+    10039 (99.68%) aligned 0 times
+    31 (0.31%) aligned exactly 1 time
+    1 (0.01%) aligned >1 times
+0.32% overall alignment rate
+
+'pBad.fasta'
+10039 reads; of these:
+  10039 (100.00%) were unpaired; of these:
+    10039 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+
+
