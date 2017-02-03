@@ -167,14 +167,9 @@ pileup14=$spec4$lib2".pileup"
 pileup15=$spec4$lib3".pileup"
 pileup16=$spec4$lib4".pileup"
 #mapPacBio script starting
-cd /home/tomas/CUL13/Virus_search/mapPacBio_results
-#To map with super-high sensitivity (useful for very-low-quality data, or remote homologies) with statistics:
-#mapPacBio.sh in=reads.fq out=mapped.sam outm=mapped.fq vslow k=8 maxindel=200 minratio=0.1 covstats=covstats.txt covhist=covhist1.txt basecov=basecov.txt bincov=bincov.txt
-mapPacBio.sh in=$genomic_PE ref=$ref1 nodisk out=$out1 outm=$outm1 vslow k=8 maxindel=200 minratio=0.1 covstats=$covstats1 covhist=$covhist1 basecov=$basecov1 bincov=$bincov1
+cd /home/tomas/CUL13/Virus_search
 #SAMTOOLS script start
 echo starting SAMTOOLS
-cd /home/tomas/CUL13/Virus_search/mapPacBio_results
-#samtools faidx preparing tab delimited file for samtools view
 samtools faidx $ref1
 samtools faidx $ref2
 samtools faidx $ref3
@@ -183,3 +178,63 @@ samtools view -@ 32 -F 0x4 -b -u -t $fai1 $out1 | samtools sort --output-fmt BAM
 samtools index -b $sorted1
 samtools mpileup -u -f $ref1 -P solexa -F 0.1 $sorted1 > $pileup1
 #rm out1
+samtools view -@ 32 -F 0x4 -b -u -t $fai1 $out2 | samtools sort --output-fmt BAM --threads 32 - -o $sorted2
+samtools index -b $sorted2
+samtools mpileup -u -f $ref1 -P solexa -F 0.1 $sorted2 > $pileup2
+#rm out2
+samtools view -@ 32 -F 0x4 -b -u -t $fai1 $out3 | samtools sort --output-fmt BAM --threads 32 - -o $sorted3
+samtools index -b $sorted3
+samtools mpileup -u -f $ref1 -P solexa -F 0.1 $sorted3 > $pileup3
+#rm out3
+samtools view -@ 32 -F 0x4 -b -u -t $fai1 $out4 | samtools sort --output-fmt BAM --threads 32 - -o $sorted4
+samtools index -b $sorted4
+samtools mpileup -u -f $ref1 -P solexa -F 0.1 $sorted4 > $pileup4
+#rm out4
+samtools view -@ 32 -F 0x4 -b -u -t $fai2 $out5 | samtools sort --output-fmt BAM --threads 32 - -o $sorted5
+samtools index -b $sorted5
+samtools mpileup -u -f $ref2 -P solexa -F 0.1 $sorted5 > $pileup5
+#rm out5
+samtools view -@ 32 -F 0x4 -b -u -t $fai2 $out6 | samtools sort --output-fmt BAM --threads 32 - -o $sorted6
+samtools index -b $sorted6
+samtools mpileup -u -f $ref2 -P solexa -F 0.1 $sorted6 > $pileup6
+#rm out6
+samtools view -@ 32 -F 0x4 -b -u -t $fai2 $out7 | samtools sort --output-fmt BAM --threads 32 - -o $sorted7
+samtools index -b $sorted7
+samtools mpileup -u -f $ref2 -P solexa -F 0.1 $sorted7 > $pileup7
+#rm out7
+samtools view -@ 32 -F 0x4 -b -u -t $fai2 $out8 | samtools sort --output-fmt BAM --threads 32 - -o $sorted8
+samtools index -b $sorted8
+samtools mpileup -u -f $ref2 -P solexa -F 0.1 $sorted8 > $pileup8
+#rm out8
+samtools view -@ 32 -F 0x4 -b -u -t $fai3 $out9 | samtools sort --output-fmt BAM --threads 32 - -o $sorted9
+samtools index -b $sorted9
+samtools mpileup -u -f $ref3 -P solexa -F 0.1 $sorted9 > $pileup9
+#rm out9
+samtools view -@ 32 -F 0x4 -b -u -t $fai3 $out10 | samtools sort --output-fmt BAM --threads 32 - -o $sorted10
+samtools index -b $sorted10
+samtools mpileup -u -f $ref3 -P solexa -F 0.1 $sorted10 > $pileup10
+#rm out10
+samtools view -@ 32 -F 0x4 -b -u -t $fai3 $out11 | samtools sort --output-fmt BAM --threads 32 - -o $sorted11
+samtools index -b $sorted11
+samtools mpileup -u -f $ref3 -P solexa -F 0.1 $sorted11 > $pileup11
+#rm out11
+samtools view -@ 32 -F 0x4 -b -u -t $fai3 $out12 | samtools sort --output-fmt BAM --threads 32 - -o $sorted12
+samtools index -b $sorted12
+samtools mpileup -u -f $ref3 -P solexa -F 0.1 $sorted12 > $pileup12
+#rm out12
+samtools view -@ 32 -F 0x4 -b -u -t $fai4 $out13 | samtools sort --output-fmt BAM --threads 32 - -o $sorted13
+samtools index -b $sorted13
+samtools mpileup -u -f $ref4 -P solexa -F 0.1 $sorted13 > $pileup13
+#rm out13
+samtools view -@ 32 -F 0x4 -b -u -t $fai4 $out14 | samtools sort --output-fmt BAM --threads 32 - -o $sorted14
+samtools index -b $sorted14
+samtools mpileup -u -f $ref4 -P solexa -F 0.1 $sorted14 > $pileup14
+#rm out14
+samtools view -@ 32 -F 0x4 -b -u -t $fai4 $out15 | samtools sort --output-fmt BAM --threads 32 - -o $sorted15
+samtools index -b $sorted15
+samtools mpileup -u -f $ref4 -P solexa -F 0.1 $sorted15 > $pileup15
+#rm out15
+samtools view -@ 32 -F 0x4 -b -u -t $fai4 $out16 | samtools sort --output-fmt BAM --threads 32 - -o $sorted16
+samtools index -b $sorted16
+samtools mpileup -u -f $ref4 -P solexa -F 0.1 $sorted16 > $pileup16
+#rm out16
