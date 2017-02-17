@@ -166,6 +166,15 @@ rm out6
 #samtools index -b $sorted16
 #samtools mpileup -u -f $ref4 -P solexa -F 0.1 $sorted16 > $pileup16
 ##rm out16
+cd /home/tomas/CUL13/Virus_search/blast
+sed -i -r -e 's/ /_/g' -e 's/:/_/g' CUL13MS_polyA_unmapped_only.fa &
+sed -i -r -e 's/ /_/g' -e 's/:/_/g' CUL13MS_ribominus_unmapped_only.fa
+sed -i -r -e '/^NNN.*/-1,.d' CUL13MS_polyA_unmapped_only.fa
+sed -i -r -e '/NNN.*/,-1d' CUL13MS_ribominus_unmapped_only.fa
+transeq -frame 6 -table 0 -verbose -sequence CUL13MS_polyA_unmapped_only.fa -outseq CUL13MS_polyA_unmapped_only_6frames_pep.fa &
+transeq -frame 6 -table 0 -verbose -sequence CUL13MS_ribominus_unmapped_only.fa -outseq CUL13MS_ribominus_unmapped_only_6frames_pep.fa
+makeblastdb -dbtype prot -parse_seqids -in CUL13MS_polyA_unmapped_only_6frames_pep.fa -out CUL13MS_polyA_unmapped_only_6frames_pep &
+makeblastdb -dbtype prot -parse_seqids -in CUL13MS_ribominus_unmapped_only_6frames_pep.fa -out CUL13MS_ribominus_unmapped_only_6frames_pep
 
 
 
