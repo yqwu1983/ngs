@@ -1,4 +1,10 @@
 #!/bin/bash
+#variables
+DATADIR="/Users/tomas/Data/Dropbox/CEITEC_lab/m6A_review/large_set_results/Orthologues_Dec13/"
+#
+cd $DATADIR
+#prvne potreba upravit jmena pridanim znaku, ktere se nevyskytuji mezi beznymi ASCI znaky jako '>[' a ]< a pak udelat nahradu (\w+[0-9]+\.[0-9]) [a-zA-Z0-9 |a-zA-Z0-9_]+ >\[
+
 sed -e 's/"Alligator mississippiensis"/"Amissi"/g' \
 -e 's/"Arabidopsis thaliana"/"Athali"/g' \
 -e 's/"Bos taurus"/"Btauru"/g' \
@@ -43,4 +49,6 @@ sed -e 's/"Alligator mississippiensis"/"Amissi"/g' \
 -e 's/"Trypanosoma_brucei_brucei_TREU927"/"Tbruce"/g' \
 -e 's/"Volvox carteri f. nagariensis"/"Vcarte"/g' \
 -e 's/"Xenopus laevis"/"Xlaevi"/g' \
--e 's/"Xylella fastidiosa"/"Xfasti"/g' m6A_orthogroups.txt >m6A_orthogroups_renamed.txt
+-e 's/"Xylella fastidiosa"/"Xfasti"/g' m6A_large_set_Dec13_OGs.txt >m6A_large_set_Dec13_OGs_ren.txt
+
+
